@@ -10,3 +10,4 @@ def rolar_dados (numero):
         i +=1
     return listavalores
     
+asasasa
