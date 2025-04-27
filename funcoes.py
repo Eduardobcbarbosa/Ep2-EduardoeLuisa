@@ -33,3 +33,19 @@ def calcula_pontos_regra_simples(listainteiros):
         if 1 <= numero <= 6:
             dicsoma[numero] += numero  
     return dicsoma
+
+def calcula_pontos_soma(listainteiros):
+    total = 0
+    for numero in listainteiros:
+        total += numero
+    return total
+
+def calcula_pontos_sequencia_baixa(listainteiros):
+    if 1 in listainteiros and 2 in listainteiros and 3 in listainteiros and 4 in listainteiros:
+        return 15
+    elif 2 in listainteiros and 3 in listainteiros and 4 in listainteiros and 5 in listainteiros:
+        return 15
+    elif 3 in listainteiros and 4 in listainteiros and 5 in listainteiros and 6 in listainteiros:
+        return 15
+    else:
+        return 0
