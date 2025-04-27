@@ -83,3 +83,14 @@ def calcula_pontos_quadra(listainteiros):
             return soma
     else:
         return 0
+    
+
+def calcula_pontos_quina(listainteiros):
+    dic = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for numero in listainteiros:
+        dic[numero] +=1
+    for quantidade in dic.values() :
+        if quantidade>= 5:
+            return 50
+    else:
+        return 0    
