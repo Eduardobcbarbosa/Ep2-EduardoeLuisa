@@ -62,7 +62,7 @@ def calcula_pontos_full_house (listainteiros):
     dic = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     for numero in listainteiros:
         dic[numero] += 1  
-    if 3 in dic.values and 2 in dic.values:
+    if 3 in dic.values() and 2 in dic.values():
         soma = 0
         for numero in listainteiros:
             soma += numero
