@@ -26,3 +26,10 @@ def remover_dado(dados_rolados1, dados_no_estoque1, dado_para_remover):
             nova_dados_no_estoque.append(dados_no_estoque1[i])
     dados_rolados1.append(dado1)
     return [dados_rolados1, nova_dados_no_estoque]
+
+def calcula_pontos_regra_simples(listainteiros):
+    dicsoma = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for numero in listainteiros:
+        if 1 <= numero <= 6:
+            dicsoma[numero] += numero  
+    return dicsoma
