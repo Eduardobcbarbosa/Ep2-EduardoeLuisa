@@ -107,11 +107,10 @@ def calcula_pontos_regra_avancada(listainteiros):
     pontuacoes['cinco_iguais'] = calcula_pontos_quina(listainteiros)
     pontuacoes['full_house'] = calcula_pontos_full_house(listainteiros)
     pontuacoes['quadra'] = calcula_pontos_quadra(listainteiros)
-    if calcula_pontos_quina(listainteiros) == 0 and calcula_pontos_full_house(listainteiros)== 0 and calcula_pontos_quadra(listainteiros) == 0 and calcula_pontos_sequencia_alta(listainteiros) == 0 and calcula_pontos_sequencia_baixa(listainteiros) == 0:
-        pontuacoes['sem_combinacao'] = calcula_pontos_soma(listainteiros) 
-    else:
-        pontuacoes['sem_combinacao'] = 0
     pontuacoes['sequencia_alta'] = calcula_pontos_sequencia_alta(listainteiros)
     pontuacoes['sequencia_baixa'] = calcula_pontos_sequencia_baixa(listainteiros)
+
+    soma_dados = calcula_pontos_soma(listainteiros)
+    pontuacoes['sem_combinacao'] = soma_dados
 
     return pontuacoes
