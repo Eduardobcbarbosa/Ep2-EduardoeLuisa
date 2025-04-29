@@ -94,3 +94,24 @@ def calcula_pontos_quina(listainteiros):
             return 50
     else:
         return 0    
+    
+def calcula_pontos_regra_avancada(listainteiros):
+    pontuacoes = {
+        'cinco_iguais': 0,
+        'full_house': 0,
+        'quadra': 0,
+        'sem_combinacao': 0,
+        'sequencia_alta': 0,
+        'sequencia_baixa': 0
+    }
+    pontuacoes['cinco_iguais'] = calcula_pontos_quina(listainteiros)
+    pontuacoes['full_house'] = calcula_pontos_full_house(listainteiros)
+    pontuacoes['quadra'] = calcula_pontos_quadra(listainteiros)
+    if calcula_pontos_quina(listainteiros) == 0 and calcula_pontos_full_house(listainteiros)== 0 and calcula_pontos_quadra(listainteiros) == 0 and calcula_pontos_sequencia_alta(listainteiros) == 0 and calcula_pontos_sequencia_baixa(listainteiros) == 0:
+        pontuacoes['sem_combinacao'] = calcula_pontos_soma(listainteiros) 
+    else:
+        pontuacoes['sem_combinacao'] = 0
+    pontuacoes['sequencia_alta'] = calcula_pontos_sequencia_alta(listainteiros)
+    pontuacoes['sequencia_baixa'] = calcula_pontos_sequencia_baixa(listainteiros)
+
+    return pontuacoes
