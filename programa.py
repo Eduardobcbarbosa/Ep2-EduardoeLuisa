@@ -62,7 +62,7 @@ while i < 12:
         elif resp=='4':
             imprime_cartela(cartela)
             print('Dados rolados:', rol)
-            print('Dados guardados:', guard)
+            print('Dados guardqdos:', guard)
             print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
             resp = input(">" )
         else:
@@ -81,17 +81,17 @@ while i < 12:
             categoria = input(">")
             categorias.append(categoria)
     tudo = []
-    for pontos in rol:
-        tudo.append(pontos)
-    for pontos2 in guard:
-        tudo.append(pontos2)
+    for ponctos in rol:
+        tudo.append(ponctos)
+    for puntos in guard:
+        tudo.append(puntos)
     cartela = faz_jogada(tudo, categoria, cartela)
 
     i+=1
 
 imprime_cartela(cartela)
 soma = 0
-for a, tipo in cartela.items():
+for oi, tipo in cartela.items():
     for num in tipo.values():
         soma+=int(num)
 
